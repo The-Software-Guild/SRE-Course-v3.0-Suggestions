@@ -11,16 +11,30 @@
 
 ![err](https://the-software-guild.s3.amazonaws.com/sre/2207/images/GrafanaAddNewPanelIcon.png). 
 
+2. Click the Add a new row button
 
-2. Hover over the Row title and click the gear icon
-3. Change Row title to Error Budget and click Update
-4. Click the add new panel icon
-5.Click the Add a new panel button
-Change Time series to Stat
-Set Data source to Loki
-In the Log browser text box type:
 
+3. Hover over the Row title and click the gear icon
+
+
+4. Change Row title to Error Budget and click Update
+
+
+5. Click the add new panel icon
+
+![err](https://the-software-guild.s3.amazonaws.com/sre/2207/images/GrafanaAddNewPanelIcon.png).
+
+6. Click the Add a new panel button
+
+7. Change Time series to Stat
+
+8. Set Data source to Loki
+
+9. In the Log browser text box type:
+
+```
 (5-((sum(count_over_time({app="ingress-nginx"}[15m] |= "orderbookdev.computerlab.online" | json | __error__ != "JSONParserError" | request_uri =~ "/buy" , request_method="POST" , request_time > 0.03)) / sum(count_over_time({app="ingress-nginx"}[15m] |="orderbookdev.computerlab.online" | json | __error__ != "JSONParserError" | request_uri = "/buy" , request_method="POST")) ) * 100))*20
+```
   
 NOTE: We have added the following changes to our SLO so that we capture only the 5%:
 5- has been added to the beginning of the query because we are only interested in the 5% that is in error
