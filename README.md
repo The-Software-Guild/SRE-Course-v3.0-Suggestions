@@ -31,7 +31,8 @@
 8. Set Data source to Loki
 
 9. In the Log browser text box type:
- - replace orderbookdev with cXXXteamXXdev, where cXXX is cohort number and teamXX is team number. User r for reskill instead of c
+ - replace orderbookdev with cXXXteamXXdev
+   - where cXXX is cohort number and teamXX is team number. *Use r for reskill instead of c*
 
 ```
 100-(sum(count_over_time({app="ingress-nginx"}[15m] |= "orderbookdev.computerlab.online" | json | __error__ !=
