@@ -65,7 +65,7 @@ sum(count_over_time({app="ingress-nginx"}[15m] |="orderbookdev.computerlab.onlin
     - Suppose we have 10 total request, with 9 less than or equal to 0.03 seconds
     - The 9 will be the numerator, the 10 is the denominator. This will give us 0.90
     - We multiply it by 100 to get 90 (90%), **which would be the percentage of request faster than or equal to 0.03**
-  9.9 Close this tab and go back to dashboard to finish setting up the panel!  
+  - 9.9 Close this tab and go back to dashboard to finish setting up the panel!  
   
 
 10. Set the Panel Title to ERROR BUDGET. 
