@@ -6,8 +6,8 @@
 - Error budgets are the top and first most important level to an SRE dashboard. Let's create an Error budget for Latency, based on our SLO created in the previous activity.
 
 ## Step-by-step
-1. In your Grafana dashboard, click the add new panel icon
-![err](https://the-software-guild.s3.amazonaws.com/sre/2207/images/GrafanaAddNewPanelIcon.png)
+1. In your Grafana dashboard, click the add new panel icon. 
+![err](https://the-software-guild.s3.amazonaws.com/sre/2207/images/GrafanaAddNewPanelIcon.png). 
 3. Hover over the Row title and click the gear icon
 4. Change Row title to Error Budget and click Update
 5. Click the add new panel icon
