@@ -35,7 +35,7 @@
    - where cXXX is cohort number and teamXX is team number. *Use r for reskill instead of c*
 
 ```
-100-(sum(count_over_time({app="ingress-nginx"}[15m] |= "orderbookdev.computerlab.online" | json | __error__ !=
+(sum(count_over_time({app="ingress-nginx"}[15m] |= "orderbookdev.computerlab.online" | json | __error__ !=
 "JSONParserError" | request_uri =~ "/buy" , request_method="POST" , request_time <= 0.03)) / 
 sum(count_over_time({app="ingress-nginx"}[15m] |="orderbookdev.computerlab.online" | json | __error__ != "JSONParserError" | request_uri = "/buy" , request_method="POST")) ) * 100
 ```
