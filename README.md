@@ -7,11 +7,15 @@
 
 ## Step-by-step
 1. In your Grafana dashboard, click the add new panel icon. 
+
+
 ![err](https://the-software-guild.s3.amazonaws.com/sre/2207/images/GrafanaAddNewPanelIcon.png). 
-3. Hover over the Row title and click the gear icon
-4. Change Row title to Error Budget and click Update
-5. Click the add new panel icon
-6.Click the Add a new panel button
+
+
+2. Hover over the Row title and click the gear icon
+3. Change Row title to Error Budget and click Update
+4. Click the add new panel icon
+5.Click the Add a new panel button
 Change Time series to Stat
 Set Data source to Loki
 In the Log browser text box type:
