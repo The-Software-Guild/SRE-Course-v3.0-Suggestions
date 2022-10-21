@@ -44,7 +44,7 @@ sum(count_over_time({app="ingress-nginx"}[15m] |="orderbookdev.computerlab.onlin
   - 9.1 **In another tab got to the explore page and select Loki Data Source and run each step**. 
   - 9.2 Set time to 1 hour. 
   - 9.3 run `{app="ingress-nginx"}`. 
-    - Query all logs from our load balancer. You will notice all web request logs to Kubernetes are here
+    - This querries all logs from our load balancer. You will notice all web request logs to Kubernetes are here
     - Click on any log. You will see labels, such as **request_uri, request_method, request_time. We will search on these labels in step 9.6**
   - 9.4 `count_over_time({app="ingress-nginx"}[15m])`. 
     - Count the number of each log stream within a 15 minute time frame
