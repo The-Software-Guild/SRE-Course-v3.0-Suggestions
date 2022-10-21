@@ -47,7 +47,7 @@ sum(count_over_time({app="ingress-nginx"}[15m] |="orderbookdev.computerlab.onlin
     - Click on any log. You will see labels, such as **request_uri, request_method, request_time. We will search on these labels in step 9.6**
   - 9.4 `count_over_time({app="ingress-nginx"}[15m])`. 
     - Count the number of each log stream within a 15 minute time frame
-    - **Notice the [15m]**, this converts the vector [log1, log2, log3,...] into a range vector [[log1], [log2, log3, log4], [log5,..]] grouped by 15 minutes. Each log stream (different type of log) will get its own vector. That is why we have more than one line plotted.
+    - **Notice the [15m]**, this converts the vector [log1, log2, log3,...] into a range vector [[log1], [log2, log3, log4], [log5,..]] grouped by 15 minutes. Each log stream (different type of log) will get its own vector. **That is why we have more than one line plotted.**
   - 9.5 `count_over_time({app="ingress-nginx"} |= "orderbookdev.computerlab.online" [15m])`. 
     - Use line search to search for the logs containing the string of the URI (you can find URI in the ingress.yaml under host)
     - |= is piping each log to do a search and only retain logs that have that string.
