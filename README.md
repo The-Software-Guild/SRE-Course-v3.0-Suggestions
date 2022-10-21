@@ -7,7 +7,7 @@
 
 ## Step-by-step
 1. In your Grafana dashboard, click the add new panel icon
-![https://the-software-guild.s3.amazonaws.com/sre/2207/images/GrafanaAddNewPanelIcon.png]()
+![https://the-software-guild.s3.amazonaws.com/sre/2207/images/GrafanaAddNewPanelIcon.png](err)
 3. Hover over the Row title and click the gear icon
 4. Change Row title to Error Budget and click Update
 5. Click the add new panel icon
