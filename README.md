@@ -33,7 +33,9 @@
 9. In the Log browser text box type:
 
 ```
-(5-((sum(count_over_time({app="ingress-nginx"}[15m] |= "orderbookdev.computerlab.online" | json | __error__ != "JSONParserError" | request_uri =~ "/buy" , request_method="POST" , request_time > 0.03)) / sum(count_over_time({app="ingress-nginx"}[15m] |="orderbookdev.computerlab.online" | json | __error__ != "JSONParserError" | request_uri = "/buy" , request_method="POST")) ) * 100))*20
+(5-((sum(count_over_time({app="ingress-nginx"}[15m] |= "orderbookdev.computerlab.online" | json | __error__ !=
+"JSONParserError" | request_uri =~ "/buy" , request_method="POST" , request_time > 0.03)) / 
+sum(count_over_time({app="ingress-nginx"}[15m] |="orderbookdev.computerlab.online" | json | __error__ != "JSONParserError" | request_uri = "/buy" , request_method="POST")) ) * 100))*20
 ```
   
 NOTE: We have added the following changes to our SLO so that we capture only the 5%:
